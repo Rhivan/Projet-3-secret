@@ -1,0 +1,119 @@
+:root {
+  --gold: rgb(218, 142, 20);
+  --lightgold: rgb(251, 250, 80);
+  --darkgold: rgb(143, 89, 15);
+  --bloodred: rgb(107, 19, 15);
+  --stonegrey: rgb(123, 112, 92);
+  --darkgrey: rgb(56, 55, 50);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+body {
+  height: 100%;
+  place-items: center;
+  line-height: 1.6;
+  background: var(--darkgrey);
+  font-family: 'Cinzel', serif;}
+
+.header{
+  background-image: url(../img/headband.jpg);
+  width: max-width;
+  height: 930px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: max-height;
+  background-color: black;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--darkgold);
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 10%;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: var(--bloodred);
+  color: var(--darkgold);
+}
+
+.card{
+  float: left;
+  color: white;
+  background-image: url(../img/cadre.png);
+  background-size: cover;
+  padding: 8rem 0 0;
+  max-width: 53ch;
+  overflow: hidden;
+  margin: 0 5%;
+  transition: transform 500ms ease;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 3em;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    var(--stonegrey),
+    var(--darkgrey)
+    );
+  margin: 0 2em;
+  transform: translateY(60%);
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+}
+
+.button {
+   cursor: pointer;
+   display: inline;
+   text-decoration: none;
+   color: var(--darkgold);
+   background-color: var(--gold);
+   padding: 0.5em 1.25em;
+   border-radius: 0.3rem
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--lightgold);
+}
+
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 158ch) {
+  .card {
+    float: center;
+    margin: 0 15%;
+  }
+}
+
+@media screen and (max-width: 255ch) and (min-width: 158ch) {
+  .card {
+    float: center;
+    margin: 0 25%;
+  }
+}
